@@ -1,6 +1,10 @@
 % Tipo de documento, tipo de papel, tamaño de letra
 \documentclass[a4paper,11pt]{article}
 
+% -----------------------------------------------------
+
+% PAQUETES
+
 % Paquete para usar reglas de castellano
 \usepackage[spanish]{babel}
 % Paquete para usar codificación UTF-8
@@ -9,23 +13,34 @@
 \usepackage{anysize}
 % Paquete para insertar hipervínculos
 \usepackage{hyperref}
+% Paquete para poner color a las tablas
+\usepackage[table,xcdraw]{xcolor}
+% Paquete para insetar imágenes
+\usepackage{graphicx}
+\usepackage{float}
+% Paquete para usar varias columnas
+\usepackage{multicol}
 
+% -----------------------------------------------------
+
+% FORMATO
+
+% Ruta de las imágenes
+\graphicspath{ {img/} }
 % Fijar márgenes
 \marginsize{2cm}{2cm}{2cm}{2cm}
 
-%Título
-%Autores
-%Resumen (IMPORTANTE: conteniendo la URL del repositorio)
-%Palabras clave
-%Introducción
-%Estado del arte
-%Imágenes y tablas
-%Fórmulas
-%Bibliografía
+% -----------------------------------------------------
+
+% PORTADA
 
 \title{\Huge{\textbf{PROYECTO FINAL. GIT + LATEX}}}
 \author{\LARGE{Jacqueline Schmidt Rio-Valle}}
 \date{\today}
+
+% -----------------------------------------------------
+
+% Documento
 
 \begin{document}
 
@@ -55,12 +70,76 @@ El proyecto se encuentra disponible en el siguiente repositorio de \textbf{Githu
 
 \section{Introducción}
 
+El objetivo del proyecto final es practicar los aspectos aprendidos durante el curso, y comprobar que se han comprendido adecuadamente.
 
+El proyecto contempla tres aspectos:
 
-\section{Estado del arte}
+\begin{enumerate}
+	\item La creación de un \textbf{repositorio} público que cumpla ciertas características que se describen más abajo.
+	\item Crear un documento en \textbf{LateX} del mismo tipo que se utiliza en las publicaciones científicas.
+	\item Usar el \textbf{repositorio} creado para controlar y documentar la redacción de ese artículo.
+\end{enumerate}
 
+\newpage
+
+\section{Listado de participantes}
+
+\begin{minipage}{0.5\linewidth}
+	\begin{itemize}
+		\item Carlos Gallardo Blanco
+		\item Rayan Ruiz Fuentes
+		\item José Molina Pastor
+		\item Alonso Leon Carmona
+		\item Éric Domenech Sanchez
+		\item Adam Riera Navarro
+		\item Bruno Moreno Ibañez
+		\item Adria Duran Ruiz
+	\end{itemize}
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+	\begin{itemize}
+		\item María Alvarez Navarro
+		\item Ángela Ortega Ramos
+		\item Inés Pons Pascual
+		\item Nora Ferrer Parra
+		\item Diana Castro Castro
+		\item Laia Mora Vega
+		\item Jana Sala Calvo
+		\item Cristina Lozano Diez
+	\end{itemize}
+\end{minipage}
 
 \section{Imágenes y tablas}
+
+Introducimos una tabla:\\
+
+	\begin{tabular}{|c|c|c|}
+		\hline
+		\rowcolor[HTML]{C0C0C0} 
+		\textbf{Variables} & \textbf{Varones} & \textbf{Mujeres} \\ \hline
+		\textbf{Edad}      & 28               & 32               \\ \hline
+		\textbf{Altura}    & 182              & 168              \\ \hline
+	\end{tabular}
+
+\vspace{0.5cm}
+
+Introducimos imágenes:
+
+\begin{multicols}{2}
+	
+	\begin{figure}[H]
+		\caption{Logo de la Universidad de Granada}
+		\centering
+		\includegraphics[width=0.5\linewidth]{ugr}
+	\end{figure}
+
+	\begin{figure}[H]
+		\caption{E-learning}
+		\centering
+		\includegraphics[width=0.5\linewidth]{e-learning}
+	\end{figure}
+	
+\end{multicols}
 
 
 \section{Fórmulas}
