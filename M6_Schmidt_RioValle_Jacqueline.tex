@@ -20,6 +20,10 @@
 \usepackage{float}
 % Paquete para usar varias columnas
 \usepackage{multicol}
+% Paquete para usar enumerados
+\usepackage{enumerate}
+% Paquete para fuentes matemáticas
+\usepackage{dsfont}
 
 % -----------------------------------------------------
 
@@ -54,7 +58,45 @@
 	
 \section{Resumen}
 
-El proyecto se encuentra disponible en el siguiente repositorio de \textbf{Github}: \url{https://github.com/jschmidt64/proyecto_final}
+El proyecto se encuentra disponible en el siguiente repositorio de \textbf{Github}: \url{https://github.com/jschmidt64/proyecto_final}\\
+
+El objetivo del proyecto final es practicar los aspectos aprendidos durante el curso, y comprobar que se han comprendido adecuadamente. El proyecto contempla tres aspectos:
+
+\begin{enumerate}
+	\item La creación de un \textbf{repositorio} público que cumpla ciertas características que se describen más abajo.
+	\item Crear un documento en \textbf{LaTeX} del mismo tipo que se utiliza en las publicaciones científicas.
+	\item Usar el \textbf{repositorio} creado para controlar y documentar la redacción de ese artículo.
+\end{enumerate}
+
+\textbf{\underline{Descripción del repositorio:}}\\
+
+\begin{itemize}
+	\item Para empezar, crearemos un repositorio en nuestra cuenta de \textbf{github} que se llame \textit{proyecto\_final}.
+	
+	\item En este repositorio vamos a llevar el control de un documento en \textbf{LaTeX} que crearemos y que se describe más abajo.
+	
+	\item Todos los ficheros necesarios (fuentes en tex, imágenes, archivos de bibliografía, etc) deben estar en el \textbf{repositorio}.
+	
+	\item Naturalmente, el documento debe poder compilarse sin problemas.//          
+\end{itemize}
+
+\textit{\underline{Ojo}}: No es suficiente con hacer un sólo envío al repositorio con los ficheros necesarios. Debe haber, al menos, una sucesión de cinco commits con sus descripciones, etc.\\
+
+\textbf{\underline{Descripción del documento:}}\\
+
+Se trata de escribir un trabajo original completo que se asemeje a un artículo científico (naturalmente, no tiene por qué ser real) y que incluya, al menos, los siguientes aspectos:
+
+\begin{enumerate}[{Apartado} 1.]
+	\item Título
+	\item Autores
+	\item Resumen
+	\item Palabras clave
+	\item Introducción
+	\item Listado de participantes
+	\item Imágenes y tablas
+	\item Fórmulas
+	\item Bibliografía
+\end{enumerate}
 
 \section{Palabras clave}
 
@@ -69,31 +111,9 @@ El proyecto se encuentra disponible en el siguiente repositorio de \textbf{Githu
 
 \section{Introducción}
 
-El objetivo del proyecto final es practicar los aspectos aprendidos durante el curso, y comprobar que se han comprendido adecuadamente.
+En lo que a \textbf{LaTeX} respecta, hemos trabajado para conocer las diversas opciones que nos ofrece, ya sea en formato de texto, tablas, listas, imágenes, fórmulas, bibliografía (usando \textbf{BibTex}).\\
 
-El proyecto contempla tres aspectos:
-
-\begin{enumerate}
-	\item La creación de un \textbf{repositorio} público que cumpla ciertas características que se describen más abajo.
-	\item Crear un documento en \textbf{LaTeX} del mismo tipo que se utiliza en las publicaciones científicas.
-	\item Usar el \textbf{repositorio} creado para controlar y documentar la redacción de ese artículo.
-\end{enumerate}
-
-\textbf{\underline{Descripción del repositorio:}}
-
-\begin{itemize}
-	\item Para empezar, crearemos un repositorio en nuestra cuenta de \textbf{github} que se llame \textit{proyecto\_final}.
-	
-	\item En este repositorio vamos a llevar el control de un documento en \textbf{LaTeX} que crearemos y que se describe más abajo.
-	
-	\item Todos los ficheros necesarios (fuentes en tex, imágenes, archivos de bibliografía, etc) deben estar en el \textbf{repositorio}.
-	                                                                             
-	\item Naturalmente, el documento debe poder compilarse sin problemas.//          
-\end{itemize}
-
-\textit{\underline{Ojo}}: No es suficiente con hacer un sólo envío al repositorio con los ficheros necesarios. Debe haber, al menos, una sucesión de cinco commits con sus descripciones, etc.
-
-\newpage
+Además, hemos trabajado con \textbf{git} y la plataforma \textbf{Github} para llevar un control de versiones con los cambios que hemos ido realizando a lo largo del desarrollo del proyecto.
 
 \section{Listado de participantes}
 
@@ -122,10 +142,15 @@ El proyecto contempla tres aspectos:
 	\end{itemize}
 \end{minipage}
 
+\newpage
+
 \section{Imágenes y tablas}
+
+\subsection{Tablas}
 
 Introducimos una tabla:\\
 
+\begin{center}
 	\begin{tabular}{|c|c|c|}
 		\hline
 		\rowcolor[HTML]{C0C0C0} 
@@ -133,8 +158,9 @@ Introducimos una tabla:\\
 		\textbf{Edad}      & 28               & 32               \\ \hline
 		\textbf{Altura}    & 182              & 168              \\ \hline
 	\end{tabular}
+\end{center}
 
-\vspace{0.5cm}
+\subsection{Imágenes}
 
 Introducimos imágenes:
 
@@ -157,11 +183,27 @@ Introducimos imágenes:
 
 \section{Fórmulas}
 
+\subsection{Fórmulas en línea}
+
 \begin{itemize}
 	\item Teorema de Pitágoras: $$\sqrt{a^2 + b^2} = c$$
 	\item Equivalencia entre masa y energía: $$E = mc^2$$
 	\item Área de una esfera: $$4\pi r^2$$
+	\item Sucesión de Fibonachi: $$x_1=1,\quad x_2=1,\quad x_n=x_{n-1}+x_{n-2}\;\;(n>2)$$
+	
 \end{itemize}
+
+\subsection{Fórmulas usando 'equation'}
+
+\begin{equation}
+\label{miecuacion}
+f(x)=\sqrt{g’(x)dx}+\pi \backslash x \in \mathds{C} - \{0\}
+\end{equation}
+
+\begin{equation}
+\label{miecuacion}
+g(x)=\frac{4x+7}{x} + 3 \backslash x \in \mathds{N} - \{0\}
+\end{equation}
 
 \newpage
 
